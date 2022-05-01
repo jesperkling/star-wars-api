@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { Button, Card, Container, Col, ListGroup, Row, ListGroupItem } from "react-bootstrap"
 import CardHeader from "react-bootstrap/esm/CardHeader"
 import { Link } from 'react-router-dom'
+import { getIdFromUrl } from "../helper/index"
 
 const Person = () => {
 	const [person, setPerson] = useState([])
@@ -56,6 +57,17 @@ const Person = () => {
 									</ListGroupItem>
 								</ListGroup>
 
+								<CardHeader>Films</CardHeader>
+								<ListGroup>
+									{films.map(films => (
+										<Link 
+											to={`/films/${getIdFromUrl(films)}`}
+											key={getIdFromUrl(films)}>
+											<ListGroupItem>Film {getIdFromUrl(films)}</ListGroupItem>
+										</Link>
+									))}
+									
+								</ListGroup>
 								<Card.Body>
 									<Button
 										className='btn'
