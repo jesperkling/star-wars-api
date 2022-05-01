@@ -32,7 +32,10 @@ const Films = () => {
 										Episode: {films.episode_id}
 									</ListGroupItem>
 									<ListGroupItem>
-										Release Date: {films.release_date}
+										Released: {films.release_date}
+									</ListGroupItem>
+									<ListGroupItem>
+										Characters: {films.characters.length}
 									</ListGroupItem>
 								</ListGroup>
 
@@ -41,7 +44,7 @@ const Films = () => {
 										className='btn'
 										as={Link}
 										to={`/films/${films.episode_id}`}
-									>Click here</Button>
+									>Read More</Button>
 								</Card.Body>
 							</Card>
 						</Col>
