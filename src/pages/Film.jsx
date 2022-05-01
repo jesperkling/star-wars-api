@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Button, Card, Container, Col, ListGroup, Row, ListGroupItem } from 'react-bootstrap'
 import CardHeader from 'react-bootstrap/esm/CardHeader'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import { getIdFromUrl } from '../helper/index.js'
+import { useNavigate, useParams } from 'react-router-dom'
+
 import swapi from '../services/swapi'
 
 const Film = () => {
