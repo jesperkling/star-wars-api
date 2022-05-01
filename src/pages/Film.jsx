@@ -22,14 +22,15 @@ const Film = () => {
 	return (
 		<>
 			<Container>
-				<h1 className='text-center'>Episode {id}</h1>
-
 				<Row xs={1} md={2} lg={3}>
 					{film && (
 						<Col>
 							<Card className='mb-4'>
 								<CardHeader>{film.title}</CardHeader>
 								<ListGroup>
+									<ListGroupItem>
+										Episode: {film.episode_id}
+									</ListGroupItem>
 									<ListGroupItem>
 										Director: {film.director}
 									</ListGroupItem>
