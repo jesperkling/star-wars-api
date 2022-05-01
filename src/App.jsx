@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Film from "./pages/Film";
+import Person from "./pages/Person";
 
 
 
@@ -22,6 +23,7 @@ function App() {
 					<Route path="/films" element={<Films />} />
 					<Route path="/films/:id" element={<Film />} />
 					<Route path="/people" element={<People />} />
+					<Route path="/people/:id" element={<Person />} />
 				</Routes>
 			</Container>
 		</div>

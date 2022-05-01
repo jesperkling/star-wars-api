@@ -3,6 +3,7 @@ import { Button, Card, Container, Col, ListGroup, Row, ListGroupItem } from 'rea
 import { Link } from 'react-router-dom'
 import CardHeader from 'react-bootstrap/esm/CardHeader'
 import swapi from '../services/swapi'
+import { getIdFromUrl } from "../helper/index"
 
 const People = () => {
 	const [people, setPeople] = useState("")
@@ -43,7 +44,7 @@ const People = () => {
 									<Button
 										className='btn'
 										as={Link}
-										to={`/people/${people.people_id}`}
+										to={`/people/${getIdFromUrl(people.url)}`}
 									>Read more</Button>
 								</Card.Body>
 							</Card>
