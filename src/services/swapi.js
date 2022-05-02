@@ -16,8 +16,8 @@ const getFilm = async (id) => {
     return response.data;
 };
 
-const getPeople = async () => {
-    const response = await axios.get(`${BASE_URL}/people`);
+const getPeople = async (page) => {
+    const response = await axios.get(`${BASE_URL}/people/?page=${page}`);
     return response.data;
 };
 

@@ -24,8 +24,8 @@ const Films = () => {
 				<h1 className='text-center'>Films</h1>
 
 				<Row xs={1} md={2} lg={3}>
-					{films && films.results.map((films) => (
-						<Col>
+					{films && films.results.map((films, id) => (
+						<Col key={id}>
 							<Card className='mb-4'>
 								<CardHeader>{films.title}</CardHeader>
 								<ListGroup>
