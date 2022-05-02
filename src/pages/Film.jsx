@@ -10,14 +10,14 @@ const Film = () => {
 	const { id } = useParams()
 	const navigate = useNavigate()
 
-	const getFilm = async () => {
+	const getFilm = async (id) => {
 		const data = await swapi.getFilm(id)
 		setFilm(data)
 	}
 
 	useEffect(() => {
-		getFilm()
-	}, [])
+		getFilm(id)
+	}, [id])
 
 	return (
 		<>
